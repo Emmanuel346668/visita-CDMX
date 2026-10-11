@@ -1,4 +1,4 @@
-import { validPlan } from './validation.mjs';
+import { validPlan, validAuthor, attributePlanChanges } from './validation.mjs';
 
 const json = (value, status = 200) => Response.json(value, { status, headers: { 'Cache-Control': 'no-store' } });
 const smallText = (value, max) => typeof value === 'string' && value.length <= max;
@@ -59,6 +59,7 @@ export default {
         result = json({ available: !!env.GROUPS, signedIn: false, displayName: 'Amigo', access: 'invitation' });
       } else if (url.pathname === '/api/groups' && request.method === 'POST') {
         const body = await readJson(request);
+        if (!validAuthor(body.author)) return withHeaders(json({ error: 'Agrega tu nombre para crear o modificar el plan del grupo.' }, 400), origin);
         if (!validPlan(body.plan) || !smallText(body.title, 80) || !body.title.trim()) return withHeaders(json({ error: 'Revisa el nombre y el itinerario.' }, 400), origin);
         const limiter = env.CREATE_LIMIT.get(env.CREATE_LIMIT.idFromName('group-creation'));
         const ipHash = await hash(request.headers.get('CF-Connecting-IP') || 'local');
@@ -77,6 +78,7 @@ export default {
         const body = request.method === 'GET' ? null : await readJson(request);
         const invite = joining ? body.invite : request.headers.get('Authorization')?.replace(/^Bearer /, '');
         if (!validInvite(invite)) return withHeaders(json({ error: 'Abre la invitación original para entrar y editar el grupo.' }, 403), origin);
+        if (request.method === 'PUT' && !validAuthor(body.author)) return withHeaders(json({ error: 'Agrega tu nombre para modificar el plan del grupo.' }, 400), origin);
         if (request.method === 'PUT' && (!validPlan(body.plan) || !Number.isSafeInteger(body.revision) || body.revision < 1)) return withHeaders(json({ error: 'Itinerario inválido.' }, 400), origin);
         const group = env.GROUPS.get(env.GROUPS.idFromName(match[1]));
         result = await group.fetch('https://internal/' + (request.method === 'PUT' ? 'save' : 'read'), { method: 'POST', body: JSON.stringify({ inviteHash: await hash(invite), plan: body?.plan, revision: body?.revision, author: smallText(body?.author, 60) && body.author.trim() || 'Amigo' }) });
@@ -98,6 +100,7 @@ export class TripGroup {
       let row = await tx.get('plan');
       if (op === '/create') {
         if (row) return json({ error: 'Este grupo ya existe.' }, 409);
+        input.plan=attributePlanChanges(null,input.plan,input.author,new Date().toISOString());
         row = { id: input.id, inviteHash: input.inviteHash, title: input.title, plan: input.plan, revision: 1, updatedAt: new Date().toISOString(), updatedBy: input.author };
         await tx.put('plan', row);
         return json(snapshot(row), 201);
@@ -106,6 +109,7 @@ export class TripGroup {
       if (op === '/read') return json(snapshot(row));
       if (op !== '/save') return json({ error: 'Ruta no encontrada.' }, 404);
       if (input.revision !== row.revision) return json({ error: 'Otro amigo guardó cambios antes. Revisa la nueva versión.', latest: snapshot(row) }, 409);
+      input.plan=attributePlanChanges(row.plan,input.plan,input.author,new Date().toISOString());
       row = { ...row, plan: input.plan, revision: row.revision + 1, updatedAt: new Date().toISOString(), updatedBy: input.author };
       await tx.put('plan', row);
       return json(snapshot(row));
