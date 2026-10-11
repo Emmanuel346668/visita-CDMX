@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "visita-cdmx-grupo",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-05-15",
+  "workers_dev": true,
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  "vars": { "PUBLIC_ORIGIN": "https://emmanuel346668.github.io" },
+  "durable_objects": { "bindings": [
+    { "name": "GROUPS", "class_name": "TripGroup" },
+    { "name": "CREATE_LIMIT", "class_name": "CreationLimit" }
+  ] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["TripGroup", "CreationLimit"] }]
+}
