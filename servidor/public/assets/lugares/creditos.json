@@ -1,0 +1,364 @@
+{
+  "monumento": {
+    "photo": "assets/lugares/monumento.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Carlos Valenzuela",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Monumento_a_la_revolucion2020.jpg"
+    },
+    "originalTitle": "File:Monumento a la revolucion2020.jpg"
+  },
+  "vasconcelos": {
+    "photo": "assets/lugares/vasconcelos.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Biblioteca_Vasconcelos,_Ciudad_de_M%C3%A9xico,_M%C3%A9xico,_2015-07-20,_DD_16-18_HDR.JPG"
+    },
+    "originalTitle": "File:Biblioteca Vasconcelos, Ciudad de México, México, 2015-07-20, DD 16-18 HDR.JPG"
+  },
+  "bellas": {
+    "photo": "assets/lugares/bellas.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Diego Delso",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Palacio_de_Bellas_Artes,_M%C3%A9xico_D.F.,_M%C3%A9xico,_2013-10-13,_DD_40.jpg"
+    },
+    "originalTitle": "File:Palacio de Bellas Artes, México D.F., México, 2013-10-13, DD 40.jpg"
+  },
+  "alameda": {
+    "photo": "assets/lugares/alameda.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "B.jars",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vista_panor%C3%A1mica_de_la_Alameda_Central_en_la_Ciudad_de_M%C3%A9xico.jpg"
+    },
+    "originalTitle": "File:Vista panorámica de la Alameda Central en la Ciudad de México.jpg"
+  },
+  "tacuba": {
+    "photo": "assets/lugares/tacuba.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Hmaglione10",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cafe_de_Tacuba_02.jpg"
+    },
+    "originalTitle": "File:Cafe de Tacuba 02.jpg"
+  },
+  "universum": {
+    "photo": "assets/lugares/universum.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "AlejandroLinaresGarcia",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:UniversumUNAM76.JPG"
+    },
+    "originalTitle": "File:UniversumUNAM76.JPG"
+  },
+  "pabio": {
+    "photo": "assets/lugares/pabio.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Juan Carlos Fonseca Mata",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pabell%C3%B3n_Nacional_de_la_Biodiversidad,_CU_UNAM.jpg"
+    },
+    "originalTitle": "File:Pabellón Nacional de la Biodiversidad, CU UNAM.jpg"
+  },
+  "cu": {
+    "photo": "assets/lugares/cu.jpg",
+    "photoCaption": "Ciudad Universitaria · Biblioteca Central, referencia del campus",
+    "photoCredit": {
+      "author": "OliAzor",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Biblioteca_UNAM_2.jpg"
+    },
+    "originalTitle": "File:Biblioteca UNAM 2.jpg"
+  },
+  "jardin": {
+    "photo": "assets/lugares/jardin.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Gobierno CDMX",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:Jard%C3%ADn_Bot%C3%A1nico_de_Chapultepec_DSC_0055_(33921506064).jpg"
+    },
+    "originalTitle": "File:Jardín Botánico de Chapultepec DSC 0055 (33921506064).jpg"
+  },
+  "zoo": {
+    "photo": "assets/lugares/zoo.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Nonbeach",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dgzentradachapultepec.JPG"
+    },
+    "originalTitle": "File:Dgzentradachapultepec.JPG"
+  },
+  "antropologia": {
+    "photo": "assets/lugares/antropologia.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "ProtoplasmaKid",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_del_Museo_Nacional_de_Antropolog%C3%ADa_de_M%C3%A9xico_2.jpg"
+    },
+    "originalTitle": "File:Vista aérea del Museo Nacional de Antropología de México 2.jpg"
+  },
+  "castillo": {
+    "photo": "assets/lugares/castillo.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Lasibris",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Castillo_de_Chapultepec_de_d%C3%ADa.jpg"
+    },
+    "originalTitle": "File:Castillo de Chapultepec de día.jpg"
+  },
+  "historia": {
+    "photo": "assets/lugares/historia.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "ProtoplasmaKid",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Museo_de_Historia_Natural_y_Cultura_Ambiental_01.jpg"
+    },
+    "originalTitle": "File:Museo de Historia Natural y Cultura Ambiental 01.jpg"
+  },
+  "latino": {
+    "photo": "assets/lugares/latino.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Torre_Latinoamericana,_Ciudad_de_M%C3%A9xico,_M%C3%A9xico,_2015-07-18,_DD_11.JPG"
+    },
+    "originalTitle": "File:Torre Latinoamericana, Ciudad de México, México, 2015-07-18, DD 11.JPG"
+  },
+  "chino": {
+    "photo": "assets/lugares/chino.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Juan Carlos Fonseca Mata",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paifang_del_Barrio_Chino,_Calle_de_Dolores,_Ciudad_de_M%C3%A9xico.jpg"
+    },
+    "originalTitle": "File:Paifang del Barrio Chino, Calle de Dolores, Ciudad de México.jpg"
+  },
+  "zocalo": {
+    "photo": "assets/lugares/zocalo.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "B.jars",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vista_de_la_Plaza_de_la_Constituci%C3%B3n_desde_la_extensi%C3%B3n_del_paso_peatonal_de_la_CDMX.jpg"
+    },
+    "originalTitle": "File:Vista de la Plaza de la Constitución desde la extensión del paso peatonal de la CDMX.jpg"
+  },
+  "palacio": {
+    "photo": "assets/lugares/palacio.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Daniel Case",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Front_facade_of_Palacio_Nacional_from_southwest,_Mexico_City.jpg"
+    },
+    "originalTitle": "File:Front facade of Palacio Nacional from southwest, Mexico City.jpg"
+  },
+  "lagunilla": {
+    "photo": "assets/lugares/lagunilla.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Mexch",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lagunilla_market.jpg"
+    },
+    "originalTitle": "File:Lagunilla market.jpg"
+  },
+  "coyoacan": {
+    "photo": "assets/lugares/coyoacan.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "TONYchainsaw",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fuente_Jard%C3%ADn_Centenario.jpg"
+    },
+    "originalTitle": "File:Fuente Jardín Centenario.jpg"
+  },
+  "frida": {
+    "photo": "assets/lugares/frida.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "No machine-readable author provided. Nachtwächter assumed (based on copyright claims).",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Museo_Frida_Kahlo.JPG"
+    },
+    "originalTitle": "File:Museo Frida Kahlo.JPG"
+  },
+  "soumaya": {
+    "photo": "assets/lugares/soumaya.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Museo_Soumaya,_Ciudad_de_M%C3%A9xico,_M%C3%A9xico,_2015-07-18,_DD_12.JPG"
+    },
+    "originalTitle": "File:Museo Soumaya, Ciudad de México, México, 2015-07-18, DD 12.JPG"
+  },
+  "jumex": {
+    "photo": "assets/lugares/jumex.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Keizers",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Museo_J%C3%BAmex_front.jpg"
+    },
+    "originalTitle": "File:Museo Júmex front.jpg"
+  },
+  "sofitel": {
+    "photo": "assets/lugares/sofitel.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "CDMEXTHEPROFIT",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hotel_Sofitel_Mexico_Reforma.jpg"
+    },
+    "originalTitle": "File:Hotel Sofitel Mexico Reforma.jpg"
+  },
+  "arena": {
+    "photo": "assets/lugares/arena.jpg",
+    "photoCaption": "",
+    "photoCredit": {
+      "author": "Thelmadatter",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://commons.wikimedia.org/wiki/File:ArenaMexicoDF.JPG"
+    },
+    "originalTitle": "File:ArenaMexicoDF.JPG"
+  },
+  "rosetta": {
+    "photo": "assets/lugares/rosetta.jpg",
+    "photoCaption": "Pan dulce · imagen representativa",
+    "photoCredit": {
+      "author": "Koffermejia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Detalle_Concha_(pan).jpg"
+    },
+    "originalTitle": "File:Detalle Concha (pan).jpg"
+  },
+  "simi": {
+    "photo": "assets/lugares/simi.jpg",
+    "photoCaption": "Café · imagen representativa; sucursal por confirmar",
+    "photoCredit": {
+      "author": "Aneth David (SLU)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A-cup-of-cappuccino-coffee-dar-es-salaam-cafe.jpg"
+    },
+    "originalTitle": "File:A-cup-of-cappuccino-coffee-dar-es-salaam-cafe.jpg"
+  },
+  "taco": {
+    "photo": "assets/lugares/taco.jpg",
+    "photoCaption": "Tacos · imagen representativa; sucursal por confirmar",
+    "photoCredit": {
+      "author": "Popo le Chien",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tacos_2.jpg"
+    },
+    "originalTitle": "File:Tacos 2.jpg"
+  },
+  "mixteco": {
+    "photo": "assets/lugares/mixteco.jpg",
+    "photoCaption": "Mole · imagen representativa; sucursal por confirmar",
+    "photoCredit": {
+      "author": "ProtoplasmaKid",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mole_negro_de_Oaxaca_con_arroz.jpg"
+    },
+    "originalTitle": "File:Mole negro de Oaxaca con arroz.jpg"
+  },
+  "tono": {
+    "photo": "assets/lugares/tono.jpg",
+    "photoCaption": "Pozole · imagen representativa; sucursal por confirmar",
+    "photoCredit": {
+      "author": "Lmartinez21",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pozole_Rojo_Mexicano.jpg"
+    },
+    "originalTitle": "File:Pozole Rojo Mexicano.jpg"
+  },
+  "chilotes": {
+    "photo": "assets/lugares/chilotes.jpg",
+    "photoCaption": "Chilaquiles · imagen representativa; sucursal por confirmar",
+    "photoCredit": {
+      "author": "Carlos t",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chilaquiles_Rojos.JPG"
+    },
+    "originalTitle": "File:Chilaquiles Rojos.JPG"
+  },
+  "tortas": {
+    "photo": "assets/lugares/tortas.jpg",
+    "photoCaption": "Pambazo · imagen representativa de comida mexicana; local por definir",
+    "photoCredit": {
+      "author": "Kelpgreen.D",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Torta_enchilada,_Pambazo_estilo_CDMX.jpg"
+    },
+    "originalTitle": "File:Torta enchilada, Pambazo estilo CDMX.jpg"
+  },
+  "insurgentes": {
+    "photo": "https://static.nmas.com.mx/Nmas/cms/1772133773218-emos-se-re-nen-en-la-glorieta-de-insurgentes-2008-foto-cuartoscuro-archivo-1080x872.jpg",
+    "photoCaption": "Emos vs. punks · jóvenes reunidos en la Glorieta de Insurgentes, 2008",
+    "photoCredit": {
+      "author": "Cuartoscuro / Archivo · publicada por N+",
+      "license": "Derechos reservados",
+      "licenseUrl": "",
+      "source": "https://www.nmas.com.mx/ciudad-de-mexico/cultura/emos-vs-punks-fotos-de-la-pelea-de-2008-en-insurgentes-que-cumple-15-anos/"
+    },
+    "originalTitle": "Fotografía de archivo · emos y punks en la Glorieta de Insurgentes"
+  },
+  "quetzal": {
+    "photo": "assets/lugares/quetzal.svg",
+    "photoCaption": "Ilustración conceptual de arquitectura orgánica",
+    "photoCredit": {
+      "author": "Emmanuel y Chatsito",
+      "license": "Ilustración original",
+      "licenseUrl": "",
+      "source": "https://www.parquequetzalcoatl.com/visita-1"
+    }
+  }
+}

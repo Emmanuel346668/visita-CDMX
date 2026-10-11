@@ -28,10 +28,11 @@ function selectScope(scope){
  renderProgress();
 }
 function acceptShared(data){
- shared=data;groupPlan=structuredClone(data.plan);sharedDirty=0;sharedConflict=false;$('#group-conflict').hidden=true;
+ shared=data;groupPlan=structuredClone(data.plan);const adjusted=upgradeItinerary(groupPlan);sharedDirty=0;sharedConflict=false;$('#group-conflict').hidden=true;
  $('#group-title').textContent=data.title;$('#copy-group-link').hidden=false;$('#copy-group-plan').hidden=false;$('#group-setup').hidden=true;$('#group-connected').hidden=false;
  if(planScope==='group'){state=groupPlan;$('#plan-content').hidden=false;$('.progress-card').hidden=false;$('#backup').disabled=false;$('#settings-button').disabled=false;render()}
  groupStatus('● Al día · '+data.updatedBy+' · '+new Date(data.updatedAt).toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit',timeZone:'America/Mexico_City'}));
+ if(adjusted){sharedDirty=1;try{if(!localStorage.getItem('visita-cdmx-draft-'+shared.id))rememberDraft()}catch{}groupStatus('Actualizando CU como sugerencia opcional…');clearTimeout(sharedTimer);sharedTimer=setTimeout(flushShared,500)}
 }
 function saveShared(){
  groupPlan=state;sharedDirty++;rememberDraft();groupStatus('● Cambios pendientes de guardar…');
@@ -56,7 +57,7 @@ async function refreshShared(){
 }
 function restoreDraft(){
  try{const draft=JSON.parse(localStorage.getItem('visita-cdmx-draft-'+shared.id));if(draft&&validState(draft.plan)){
-  groupPlan=draft.plan;sharedDirty=1;sharedConflict=draft.revision!==shared.revision;
+  groupPlan=draft.plan;upgradeItinerary(groupPlan);sharedDirty=1;sharedConflict=draft.revision!==shared.revision;
   if(planScope==='group'){state=groupPlan;render()}
   if(sharedConflict){$('#group-conflict').hidden=false;groupStatus('Hay un borrador tuyo y cambios nuevos del grupo. Revisa ambas versiones.')}else{groupStatus('Recuperamos tu borrador; guardando…');flushShared()}
  }}catch{}
@@ -78,7 +79,7 @@ async function initShared(){
  try{const service=await groupRequest('/api/collaboration');serviceReady=service.available;signedIn=service.access==='invitation'||service.signedIn;
   if(!serviceReady)throw Error('El guardado compartido todavía no está disponible.');
   if(!signedIn){groupStatus('Abre la invitación original del grupo.');return}
-  $('#create-group').disabled=false;$('#group-alias').value=service.displayName==='Amigo'?'':service.displayName;
+  $('#create-group').disabled=false;$('#group-alias').value=service.displayName==='Amigo'?currentSuggestionAuthor():service.displayName;
   groupStatus('Crea el grupo una vez y comparte su invitación. Todos podrán editar.');if(groupLink?.id)await enterGroup();
  }catch(error){groupStatus(error.message)}
 }
