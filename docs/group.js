@@ -1,10 +1,14 @@
 'use strict';
+window.CDMX_GROUP_SERVER = 'https://visita-cdmx-grupo.emmanuel346668.workers.dev';
 let shared=null,groupPlan=null,sharedDirty=0,sharedSaving=false,sharedConflict=false,sharedTimer,serviceReady=false,signedIn=false;
 const groupKey='visita-cdmx-group-v1';
 let groupLink=null;
 try{groupLink=JSON.parse(localStorage.getItem(groupKey))}catch{}
 async function groupRequest(path,method='GET',body){
- const response=await fetch(path,{method,credentials:'same-origin',cache:'no-store',headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});
+ const headers=body?{'Content-Type':'application/json'}:{};
+ if(groupLink?.invite)headers.Authorization='Bearer '+groupLink.invite;
+ const base=(window.CDMX_GROUP_SERVER||'').replace(/\/$/,'');
+ const response=await fetch(base+path,{method,credentials:'omit',cache:'no-store',headers,body:body?JSON.stringify(body):undefined});
  let data;try{data=await response.json()}catch{throw Error('El plan compartido necesita la versión publicada con guardado en línea.')}
  if(!response.ok){const error=Error(data.error||'No se pudo conectar.');error.status=response.status;error.data=data;throw error}return data;
 }
@@ -60,6 +64,7 @@ function restoreDraft(){
 function shareUrl(){if(!groupLink?.id||!groupLink.invite)return '';const url=new URL(location.href);url.search='';url.hash=new URLSearchParams({grupo:groupLink.id,invitacion:groupLink.invite}).toString();return url.href}
 async function enterGroup(){
  if(!groupLink?.id)return;
+ if(!groupLink.invite){groupStatus('Abre la invitación original del grupo para volver a entrar.');return}
  groupStatus('Conectando con el grupo…');
  try{let data;if(groupLink.invite)data=await groupRequest('/api/groups/'+groupLink.id+'/join','POST',{invite:groupLink.invite});else data=await groupRequest('/api/groups/'+groupLink.id);
   acceptShared(data);restoreDraft();history.replaceState(null,'','#grupo='+groupLink.id);
@@ -70,9 +75,9 @@ async function initShared(){
  if(fragment.get('grupo')&&fragment.get('invitacion')){groupLink={id:fragment.get('grupo'),invite:fragment.get('invitacion')};persistGroupLink()}
  if(location.hash.startsWith('#grupo'))setView('group');
  if(location.protocol==='file:'){groupStatus('Esta copia es personal. El plan del grupo estará disponible cuando se publique el sitio.');return}
- try{const service=await groupRequest('/api/collaboration');serviceReady=service.available;signedIn=service.signedIn;
+ try{const service=await groupRequest('/api/collaboration');serviceReady=service.available;signedIn=service.access==='invitation'||service.signedIn;
   if(!serviceReady)throw Error('El guardado compartido todavía no está disponible.');
-  if(!signedIn){$('#group-signin').hidden=false;groupStatus('Inicia sesión para crear o abrir el grupo.');return}
+  if(!signedIn){groupStatus('Abre la invitación original del grupo.');return}
   $('#create-group').disabled=false;$('#group-alias').value=service.displayName==='Amigo'?'':service.displayName;
   groupStatus('Crea el grupo una vez y comparte su invitación. Todos podrán editar.');if(groupLink?.id)await enterGroup();
  }catch(error){groupStatus(error.message)}
